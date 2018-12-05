@@ -20,14 +20,6 @@ h3 {
     font-weight: 700;
     color: #B7170E;
 }
-h4 {
-    font-size: 16px;
-    font-weight: 400;
-    font-style: italic;
-}
-a{
-    text-decoration: none;
-}
 header {
     display: flex;
     width: 80%;
@@ -51,27 +43,13 @@ header {
 .left-nav li {
    padding-right: 120px;
 }
-nav a:hover {
-    color: #B7170E;
-    border-bottom: solid 2px #B7170E;
-}
 .logo-container img {
     width: 132px;
     height: 64px;
 }
-.logo-container:hover {
-    border: none;
-}
 .search {
     width: 17px;
     height: 15px;
-}
-#search-box {
-    position: fixed;
-    top: 60px;
-    right: 120px;
-    display: none;
-    z-index: 100;
 }
 .hero-banner {
     background-image: url("../img/skyjaborgir1.jpg");
@@ -133,20 +111,6 @@ nav a:hover {
     height: 32px;
     border: none;
 }
-.small-button a:hover {
-    background-color: #fff;
-    color: #B7170E;
-    border: solid 2px #B7170E;
-}
-.small-button-cal{
-    background-color: #B7170E;
-    width: 130px;
-    height: 32px;
-    border: none;
-    display: inline-block;
-    color: #fff;
-    text-align: center;
-}
 .small-button a{
     font-size: 12px;
     font-weight: 900;
@@ -154,10 +118,6 @@ nav a:hover {
     text-transform: uppercase;
     color: #fff;
     margin: 0 auto;
-    display: inline-block;
-    text-align: center;
-    width: 100%;
-    vertical-align: bottom;
 }
 .card-title {
     position: absolute;
@@ -171,11 +131,9 @@ nav a:hover {
     text-transform: uppercase;
     color: #B7170E;
     background-color: #fff;
-    width: 240px;
+    width: 382px;
     height: 48px;
     border: 2px solid #B7170E;
-    display: block;
-    margin-bottom: 16px;
 }
 .fyrirsogn {
     width: 75%;
@@ -188,12 +146,12 @@ nav a:hover {
     justify-content: space-evenly;
     width: 80%;
     margin:0 auto;
-    padding-top: 40px;
+    padding: 40px 0  96px;
 }
 .barinn {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 120px;
+    margin-bottom: 120px;
 }
 .barinn img {
     width: 50%;
@@ -213,7 +171,6 @@ footer {
     flex-wrap: wrap;
     background-color: #B7170E;
     align-items: center;
-    margin-top: 120px;
 }
 .footer-div {
     width: 33.333333%;
@@ -230,10 +187,7 @@ footer {
     margin: 0 auto;
     display: flex;
     justify-content: space-between
-}
-.top-text {
-    width: 80%;
-    margin: 64px auto 32px;
+
 }
 .text-box {
     width: 66%;
@@ -241,18 +195,5 @@ footer {
 .side-bar {
     width: 17%;
 }
-.calendar{
-    width: 80%;
-    margin: 120px auto; 
-}
-table {
-    width: 85%;
-    margin: 32px auto 0;  
-}
-td {
-    padding: 24px 0 24px;
-    border-bottom: solid #B7170E 0.5px;
-}
-td a h2:hover {
-    border-bottom: solid 2px #B7170E;
-}
+
+
