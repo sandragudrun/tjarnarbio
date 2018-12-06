@@ -26,7 +26,7 @@ header: `
         <li><img class="search" id="search" src="img/icon/search.png" alt="leit"></li>
     </ul>
     <form action="#" onsubmit="return showSearchResults()">
-        <input type="text" name="search" id="search-box">
+        <input type="text" name="search" id="search-box" placeholder="  Sláðu inn leitarorð hér">
     </form>
     </nav>
 `,

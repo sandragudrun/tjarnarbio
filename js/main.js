@@ -2,6 +2,16 @@ var header = document.querySelector('header');
 var main = document.querySelector('main');
 var footer = document.querySelector('footer');
 
+function pad(value) 
+{ if (value < 10) { 
+    return '0' + value; 
+    } 
+    else 
+    { 
+        return value; 
+    }
+} //bætir 0 framan við mínútur, svo það verður td. 20:00 en ekki 20:0, fann á stack overflow
+
 var showSearchResults = function(){
    main.innerHTML = templates.leit;
    cardContainer = document.querySelector(".card-container");
@@ -25,7 +35,7 @@ var showSyningar = function(){
 
    loadCards(-1);
 }
-
+//-1 í sviganum að ofan er argument
 var searchBox = document.querySelector("#search-box");
 
 var showSearchBox = function(){
@@ -54,6 +64,7 @@ var showDagatal = function(){
    loadMonths();
    listDates();
 }
+
 
 document.getElementById("syningar").onclick = showSyningar;
 document.getElementById("dagatal").onclick = showDagatal;
@@ -274,9 +285,20 @@ var cards = [
          {
             date: new Date('2019-04-04T20:00:00')
          }  
-     ],
+     ]
      },
 
 ];
+
+for (i = 0; i < cards.length; i ++) {
+   for (var iDate = 0; iDate < cards[i].dates.length; iDate ++) {
+      if (iDate === 0 || cards[i].nextShow > cards[i].dates[iDate])  { //ef sýning er seinni (hærri) en næsta sýning
+         if (cards[i].dates[iDate].date > Date.now())
+         {
+            cards[i].nextShow = cards[i].dates[iDate].date; //þá er næsta sýning framar í röðinni, next show = dagsetning næstu sýningar
+         }   
+      }
+   }
+} //fer í gegnum spjöld, finnur dagsetningu næstu sýningar, þetta bætir propertyinu next show við spjöldin
 
 loadCards(6);

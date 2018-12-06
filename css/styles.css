@@ -25,8 +25,9 @@ h4 {
     font-weight: 400;
     font-style: italic;
 }
-a{
+a, a:visited{
     text-decoration: none;
+    color: #000;
 }
 header {
     display: flex;
@@ -67,12 +68,20 @@ nav a:hover {
     height: 15px;
 }
 #search-box {
-    position: fixed;
+    position: absolute;
     top: 60px;
     right: 120px;
     display: none;
     z-index: 100;
+    width: 350px;
+    height: 40px;
+    opacity: 0.8;
+    border: solid 0.1px rgba(0, 0, 0, 0.2)
 }
+input::placeholder {
+    color: #B7170E;
+    font-size: 16px;
+  }
 .hero-banner {
     background-image: url("../img/skyjaborgir1.jpg");
     background-position: center;
@@ -123,6 +132,18 @@ nav a:hover {
     width: 320px;
     margin: 4px;
     position: relative;
+}
+.ghost-box {
+    position:absolute;
+    top: 0;
+    width: 320px;
+    height: 100%;
+    background-color:#fff;
+    opacity: 0;
+    transition: all .3s ease;
+  }
+.ghost-box:hover {
+    opacity:0.7;
 }
 .small-button {
     position: absolute;
@@ -256,3 +277,15 @@ td {
 td a h2:hover {
     border-bottom: solid 2px #B7170E;
 }
+
+select {
+    -webkit-appearance: none;
+    font-size: 24px;
+    font-weight: 700;
+    border: none;
+}
+.arrow {
+    size: 16px;
+}
+/* media queries*/
+

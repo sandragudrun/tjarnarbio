@@ -40,18 +40,9 @@ function getAllDates()
 
 var container = document.querySelector("#calendar-wrap");
 
-function pad(value) 
-{ if (value < 10) { 
-    return '0' + value; 
-    } 
-    else 
-    { 
-        return value; 
-    }
-} //bætir 0 framan við mínútur, svo það verður td. 20:00 en ekki 20:0, fann á stack overflow
 
-var dayNames = ["SUN", "MON", "TUES", "WED", "THURS", "FRI", "SAT", "SUN"];
-var monthNames = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
+var dayNames = ["Sunnudagur", "Mánudagur", "Þriðjudagur", "Miðvikudagur", "Fimmtudagur", "Föstudagur", "Laugardagur"];
+var monthNames = ["Janúar", "Febrúar", "Mars", "Apríl", "Maí", "Júní", "Júlí", "Ágúst", "September", "Október", "Nóvember", "Desember"];
 
 function getMonths() {
     var allDates = getAllDates();
