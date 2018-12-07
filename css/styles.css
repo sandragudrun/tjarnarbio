@@ -7,9 +7,11 @@ h1 {
     font-size: 36px;
     font-weight: 700;
     color: #fff; 
+    text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.25);
     text-transform: uppercase;
+    z-index: 100;
 }
-h2{
+h2 {
     font-size: 24px;
     font-weight: 900;
     color: #B7170E;
@@ -35,8 +37,8 @@ header {
     margin:0 auto;
     font-weight: 700;
 }
- li {
-     display: inline-block;
+li {
+    display: inline-block;
  }
 .right-nav {
     margin-left:auto;  
@@ -133,6 +135,9 @@ input::placeholder {
     margin: 4px;
     position: relative;
 }
+.card:hover h1 {
+    text-shadow: 0px 4px 2px rgba(0, 0, 0, 0.2);
+}
 .ghost-box {
     position:absolute;
     top: 0;
@@ -140,10 +145,24 @@ input::placeholder {
     height: 100%;
     background-color:#fff;
     opacity: 0;
-    transition: all .3s ease;
+    transition: all .5s ease;
+    text-align: center;
+    display: table-cell; 
+    vertical-align: middle;
   }
 .ghost-box:hover {
     opacity:0.7;
+}
+/*.ghost-text {
+    height: 40%;
+    position: absolute;
+    top: 150px;
+    left: 55px;
+}*/
+/*þetta virkar í inspect ekki í alvöru why!!!"#"$"#$"!!*/
+.ghost-box h3 {
+    border-bottom: solid 2px;
+    display: inline;
 }
 .small-button {
     position: absolute;
@@ -153,6 +172,7 @@ input::placeholder {
     width: 130px;
     height: 32px;
     border: none;
+    z-index: 2;
 }
 .small-button a:hover {
     background-color: #fff;
@@ -274,7 +294,8 @@ td {
     padding: 24px 0 24px;
     border-bottom: solid #B7170E 0.5px;
 }
-td a h2:hover {
+td h2:hover {
+    display: inline;
     border-bottom: solid 2px #B7170E;
 }
 
@@ -284,8 +305,33 @@ select {
     font-weight: 700;
     border: none;
 }
-.arrow {
-    size: 16px;
+option:hover {
+    color: #B7170E;
 }
 /* media queries*/
 
+@media only screen and (max-width: 600px) {
+    .right-nav, .left-nav {
+        display: none;
+    }
+    .cards {
+        width:100%;
+    }
+    .card{
+        width:184px;
+        heigth: 248px;
+    }
+    .ghost-box {
+        width: 184px;
+    }
+    .barinn img {
+        width: 100%;
+        height: 100%;  
+    }
+    .bar-text-wrapper {
+        width:100%;
+    }
+    .footer-div {
+        width: 100%;
+    }
+  }

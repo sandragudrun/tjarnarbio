@@ -39,11 +39,19 @@ function addCard(play){
              <h1>${play.name}</h1>
         </div> 
         <div class = "ghost-box">
+            <div class "ghost-text">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
             <h2>Næstu sýningar</h2>
             ${dateCard}
             <br>
             <br>
             <h3>Nánar</h3>
+            </div>
         </div>         
     </div> `;
     cardContainer.innerHTML += card;

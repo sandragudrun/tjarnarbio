@@ -74,6 +74,7 @@ function loadMonths() {
     for(i = 0; i < months.length; i++) {
         var option = document.createElement("option");
         option.text = months[i];
+        option.value = i; //notast til að stíla options 
         monthList.add(option); 
     } 
 } //bætir mánuðum inn í option í select í html
